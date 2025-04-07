@@ -1,9 +1,13 @@
+#Exercises: Level 1
+
+#1
 age = int(input(f'Enter your age: '))
 if age >= 18:
     print(f'You are old enough to drive')
 else:
     print(f'You need {18-age} years to drive')
 
+#2
 yourAge = int(input("Enter your age: "))
 myAge = 20
 
@@ -14,6 +18,7 @@ elif myAge < yourAge:
 else:
     print(f'We are of the same age ')
 
+#3
 n1 = int(input(f"Enter number 1: "))
 n2 = int(input(f"Enter number 2: "))
 
@@ -24,7 +29,8 @@ elif n1 < n2:
 else:
     print(f'The numbers are equal')
 
-
+#Exercises: Level 2
+#1
 score = int(input("Enter your score: "))
 
 if score < 50:
@@ -40,7 +46,7 @@ elif score <= 100 and score >= 90:
 else:
     print(f"Score no valid")
 
-
+#2
 month = input("Enter the current month: ").upper()
 
 if month == "SEPTEMBER" or month == "OCTOBER" or month == "NOVEMBER":
@@ -58,7 +64,7 @@ elif month == "JUNE" or month == "JULY" or month == "AUGUST":
 else:
     print(f"Invalid Data")
 
-
+#3
 fruits = ['banana', 'orange', 'mango', 'lemon']
 newFruit = input("Enter a fruit: ").lower()
 
@@ -69,8 +75,7 @@ else:
     fruits.append(newFruit)
 print(fruits)
 
-
-
+#Exercises: Level 3
 person = {
     'first_name': 'Fernanda',
     'last_name': 'Rodriguez',

@@ -1,10 +1,11 @@
 import random as rd
-import string
+import string as st
 
-
+#Exercises: Level 1
+#1
 def random_user_id():
     word = ''
-    char = string.ascii_letters + string.digits
+    char = st.ascii_letters + st.digits
     for i in range(6):
         x = rd.randint(0,len(char))
         word += char[x]
@@ -16,7 +17,7 @@ def user_id_gen_by_user():
     word = ''
     numChar = int(input("Enter the number of characters: "))
     numUser = int(input("Enter the number of user names: "))
-    char = string.ascii_letters + string.digits
+    char = st.ascii_letters + st.digits
     for c in range(numUser):
         for i in range(numChar):
             x = rd.randint(0,len(char))
@@ -34,12 +35,8 @@ def rgb_color_gen():
 
 print(rgb_color_gen())
 
-
-
-import random as rd
-import string as st
-
-
+#Exercises: Level 2
+#1
 def list_of_hexa_colors(n):
     char = st.ascii_letters[:6] + st.digits
     listHex = []
@@ -52,7 +49,7 @@ def list_of_hexa_colors(n):
         hx = '#'
     return listHex
 
-
+#2
 def list_of_rgb_colors(n):
     rgbList = []
     for i in range(n):
@@ -63,7 +60,7 @@ def list_of_rgb_colors(n):
         rgbList.append(rgb)
     return rgbList
 
-
+#3
 def generate_colors(colorType,n):
     if colorType.upper() == "HEX":
         hx = list_of_hexa_colors(n)
@@ -76,18 +73,15 @@ def generate_colors(colorType,n):
     else:
         print(f"Color type no valid")
 
-
-import random as rd
-import string as st
+#Exercises: Level 3
 fruits = ["manzana", "plátano", "naranja", "uva", "sandía", "pera", "kiwi", "mango", "fresa", "cereza"]
 
-
-
+#1
 def shuffle_list(lt):
     rd.shuffle(lt)
     return lt
 
-
+#2
 def unique_nums():
     nums = set()
     while len(nums) <= 7:
@@ -95,4 +89,3 @@ def unique_nums():
         nums.add(st.digits[x])
     return nums
 
-print(unique_nums())

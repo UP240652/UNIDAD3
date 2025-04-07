@@ -1,16 +1,17 @@
 import math
 
-
+#Exercises: Level 1
+#1
 def add_two_numbers(n1,n2):
     sum = n1 + n2
     return sum
 
-
+#2
 def circle_area(r):
     area = math.pi*r**2
     return area
 
-
+#3
 def add_all_nums(nums):
     sum = 0
     if type(nums) == list:
@@ -26,12 +27,12 @@ def add_all_nums(nums):
             return f"One element in the list is not a number"
     return sum
 
-
+#4
 def temperatureCF(cel):
     far = (cel * 9/5) + 32
     return far
 
-
+#5
 def check_season(month):
     if month == "SEPTEMBER" or month == "OCTOBER" or month == "NOVEMBER":
         return f"The current season is Autumn"
@@ -47,12 +48,12 @@ def check_season(month):
     else:
         return f"Invalid Data"
     
-
+#6
 def calculate_slope(x1,x2,y1,y2):
     slope = (y2+y1)/(x2-x1)
     return slope
 
-
+#7
 def solve_quadratic_eqn(a,b,c):
     if b**2 - 4*a*c >= 0:
         sol1 = (-b + math.sqrt(b**2 - 4*a*c))/(2*a)
@@ -61,7 +62,7 @@ def solve_quadratic_eqn(a,b,c):
         return "The ecuation don't have any real solution"
     return sol1, sol2
 
-
+#8
 def print_list(lis):
     if type(lis) == list:
         for i in lis:
@@ -69,14 +70,14 @@ def print_list(lis):
     else:
         return f"{lis} is not a list"
     
-
+#9
 def reverse_list(arr):
     reversed_arr = []
     for i in range(len(arr) - 1, -1, -1):  
         reversed_arr.append(arr[i])
     return reversed_arr
 
-
+#10
 capItems = []
 def capitalize_list_items(li):
     if type(li) == list:
@@ -87,13 +88,13 @@ def capitalize_list_items(li):
         return f"{li} is not a list"
     return capItems
 
-
+#11
 fruits = ["apple", "banana", "cherry"]
 def add_item(li,item):
     li.append(item)
     return li
 
-
+#12
 def remove_item(li,item):
     if item in li:
         li.remove(item)
@@ -101,14 +102,14 @@ def remove_item(li,item):
         return f"{item} is not in the list"
     return li
 
-
+#13
 def sum_of_numbers(num):
     sum = 0
     for i in range(num+1):
         sum += i
     return sum
 
-
+#14
 sumOdd = 0
 def sum_of_odds(num):
     for i in range(num+1):
@@ -116,7 +117,7 @@ def sum_of_odds(num):
             sumOdd += i
     return sumOdd
 
-
+#15S
 sumEven = 0
 def sum_of_even(num):
     for i in range(num+1):
@@ -125,9 +126,8 @@ def sum_of_even(num):
     return sumEven
 
 
-import math
-
-
+#Exercises: Level 2
+#1
 def evens_and_odds(num):
     numOdd = 0
     numEven = 0
@@ -141,21 +141,22 @@ def evens_and_odds(num):
                 numOdd += 1
         return numOdd,numEven
     
-
+#2
 def factorial(num):
     fact = 1
     for i in range(1, num+1):
         fact = fact * i
     return fact
 
-
+#3
 def is_empty(var):
     return not bool(var)
 
-
+#4.1
 def calculate_mean(num):
     return sum(num) / len(num) if num else None
 
+#4.2
 def calculate_median(num):
     sorted_numbers = sorted(num)
     n = len(sorted_numbers)
@@ -164,6 +165,7 @@ def calculate_median(num):
         return (sorted_numbers[mid - 1] + sorted_numbers[mid]) / 2
     return sorted_numbers[mid]
 
+#4.3
 def calculate_mode(num):
     frequency = {}
     max_freq = 0
@@ -179,17 +181,21 @@ def calculate_mode(num):
 
     return modes if len(modes) > 1 else modes[0]
 
+#4.4
 def calculate_range(num):
     return max(num) - min(num)
 
+#4.5
 def calculate_variance(num):
     mean = calculate_mean(num)
     return sum((x - mean) ** 2 for x in num) / len(num)
 
+#4.6
 def calculate_std(num):
     return math.sqrt(calculate_variance(num))
 
-
+#Exercises: Level 3
+#1
 def is_prime(num):
     if num < 2:
         return False
@@ -198,19 +204,19 @@ def is_prime(num):
             return False
     return True
 
-
+#2
 def check_if_repeat(lst):
     return not len(lst) == len(set(lst))
 
-
+#3
 def all_same_type(lst):
     return all(type(item) == type(lst[0]) for item in lst) if lst else True
 
-
+#4
 def is_valid_variable(name):
     return name.isidentifier()
 
-
+#5
 countries_data = [
     {
         "name": "Afghanistan",
@@ -2832,7 +2838,7 @@ countries_data = [
     }
 ]
 
-
+#5.1
 def most_spoken_languages(countries, top=10):
     language_count = {}
 
@@ -2848,7 +2854,7 @@ def most_spoken_languages(countries, top=10):
     return [lang[0] for lang in sorted_languages[:top]]
 
 
-
+#5.2
 def most_populated_countries(countries, top=10):
     sorted_countries = sorted(countries, key=lambda x: x["population"], reverse=True)
     return [(country["name"], country["population"]) for country in sorted_countries[:top]]

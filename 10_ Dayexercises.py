@@ -1,4 +1,6 @@
-for i in range (-1,11,1):
+#Exercises: Level 1
+#1
+for i in range (0,11,1):
     print(f"For loop: {i}")
 
 x = 0
@@ -6,7 +8,7 @@ while x != 11:
     print(f"While loop: {x}")
     x = x+1
 
-
+#2
 for i in range (10,0,-1):
     print(f"For loop: {i}")
 
@@ -15,21 +17,21 @@ while x != -1:
     print(f"While loop: {x}")
     x = x-1
 
-
+#3
 for i in range (0,8,1):
     print(f"#"*i)
 
-
+#4
 for i in range(8):
     for x in range(8):
         print(f"#", end=f" ")
     print()
 
-
+#5
 for i in range(11):
     print(f"{i} x {i} = {i**2}")
 
-
+#6
 libraries = ['Python', 'Numpy','Pandas','Django', 'Flask']
 
 i = 0
@@ -37,22 +39,24 @@ for lib in libraries:
     print(f"Element {i}: {lib}")
     i = i + 1
 
-
+#7
 for i in range(0,101,1):
     if i % 2 == 0:
         print(i)
 
-
+#8
 for i in range(0,101,1):
     if i % 2 != 0:
         print(i)
 
+#Exercises: Level 2
+#1
 suma = 0
 for i in range(101):
     suma = suma + i
 print(f"The sum of all numbers from 1 to 100 is {suma}")
 
-
+#2
 sumOdd = 0
 sumEven = 0
 
@@ -66,7 +70,7 @@ for i in range(101):
 print(f"The sum of all evens is {sumEven}. And the sum of all odds is {sumOdd}.")
 
 
-
+#Exercises: Level 3
 data_countries = [
   'Afghanistan',
   'Albania',
@@ -262,13 +266,15 @@ data_countries = [
   'Zambia',
   'Zimbabwe'
 ]
+
+#1
 land = []
 for country in data_countries:
     if "land" in country:
         land.append(country)
 #print(land)
 
-#This is a fruit list, ['banana', 'orange', 'mango', 'lemon'] reverse the order using loop.
+#2
 fruits = ['banana', 'orange', 'mango', 'lemon']
 
 reversed_fruits = []
@@ -276,7 +282,7 @@ for i in range(len(fruits) - 1, -1, -1):  # Loop from the last index to the firs
     reversed_fruits.append(fruits[i])
 print(reversed_fruits)
 
-#Go to the data folder and use the countries_data.py file.
+#3
 data_countries = [
     {
         "name": "Afghanistan",
@@ -2898,7 +2904,7 @@ data_countries = [
     }
 ]
 
-
+#3.1
 language_set = set()
 for country in data_countries:
     for language in country["languages"]:
@@ -2909,6 +2915,7 @@ print("Total number of languages:", total_languages)
 
 from collections import defaultdict
 
+#3.2
 language_count = defaultdict(int)
 for country in data_countries:
     for language in country["languages"]:
@@ -2919,7 +2926,7 @@ print("Ten most spoken languages:")
 for i in range(min(10, len(sorted_languages))):
     print(sorted_languages[i])
 
-
+#3.3
 sorted_countries = sorted(data_countries, key=lambda x: x["population"], reverse=True)
 print("Ten most populated countries:")
 for i in range(min(10, len(sorted_countries))):
